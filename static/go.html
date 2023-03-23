@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>TitaniumNetwork</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="c-box containerb">
+        <center>
+            <h1>Surf Freely</h1>
+            <h2>Browse with Freedom.</h2>
+            <h2>Type in the website you wish to unblock and press go, to get going.</h2>
+        </center>
+        <center>
+            <!--<form action="" method="get" id="web-search-box" style="transform:scale(1.1)">-->
+            <form id="web-search-box" style="transform:scale(1.1)">
+                <p>
+                    <input type="text" placeholder="Enter URL" style="border:none;border-radius: 5px;padding:10px;" id="url" autocomplete="false" name="url" />&nbsp;
+                    <input type="submit" class="selbuttons" value="Go" />
+                    <script>
+                    var host = location.hostname.split('.'),
+                        purl = location.hostname,
+                        ifr = document.getElementById('ifr');
+                    if (host.length == 3) {
+                        purl = `${host[1]}.${host[2]}`;
+                    }
+                    var url = document.getElementById('url');
+
+                    window.addEventListener('load', () => {
+                        url.focus();
+                    });
+
+                    const form = document.getElementById('web-search-box')
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        window.location = './load.html#' + btoa(url.value);
+                    })
+
+                    //these are the shortcut buttons
+                    const set = data => url.value = data;
+                    </script>
+                </p>
+            </form>
+        </center>
+        <center>
+            <h3>About Ultraviolet:</h3>
+            <h4>Ultraviolet is a highly advanced web proxy used for evading internet censorship or accessing websites in a controlled sandbox.</h4>
+            <div class="d-box">
+                <h1>Popular supported sites:</h1>
+                <h3><span class="preset" onclick="set('google.com')"><a href="#">Google</a></span></h3>
+                <h3><span class="preset" onclick="set('youtube.com')"><a href="#">YouTube</a></span></h3>
+                <h3><span class="preset" onclick="set('spotify.com')"><a href="#">Spotify</a></span></h3>
+                <h3><span class="preset" onclick="set('discord.com')"><a href="#">Discord</a></span></h3>
+                <h3><span class="preset" onclick="set('reddit.com')"><a href="#">Reddit</a></span></h3>
+            </div>
+        </center>
+    </div>
+</body>
+</html>

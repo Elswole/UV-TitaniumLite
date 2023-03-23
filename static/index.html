@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TitaniumNetwork</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/primary.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar" id="mynavbar">
+      <a href="" class="logo">TitaniumNetwork</a>
+      <a href="#" onclick="openPage(event, 'contact')">Contact</a>
+      <a href="#" onclick="openPage(event, 'games')" ondblclick="gframe.src = gframe.src;">Games</a>
+      <a href="#" onclick="openPage(event, 'selection')" ondblclick="pxframe.src = pxframe.src;">Surf Freely</a>
+      <a href="#" id="indexPage" onclick="openPage(event, 'index') ">Home</a>
+      <a href="javascript:void(0);" class="icon" onclick="borger()"><i class="fa fa-bars"></i></a>
+    </div>
+    <!-- Tab content -->
+    <!-- index-->
+<div id="index" class="tabcontent">
+  <div class="centerh containerc">
+  <h1>TitaniumNetwork</h1>
+  <h4>With TitaniumNetwork's services, you can browse the internet freely without restriction and you do not have to worry about your school/work/company being able to see your activities!</h4>
+  <h4>NOTE: By default and unmodified from the <a href="https://github.com/amethystnetwork-dev/UV-TitaniumLite">GitHub repo</a>, no user data is stored. However, users can host thier own instance of this website that could have been modified to store user data.</h4>
+  <h4>Use the navigation below to select your destination!</h4>
+  <a href="#" onclick="openPage(event, 'selection')" class="button">Surf Freely</a>
+  <a href="#" onclick="openPage(event, 'bookmarklets')" class="button">Bookmarklets</a>
+</div>
+</div>
+<!-- end of index-->
+<!-- games-->
+<div id="games" class="tabcontent">
+  <iframe allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html"  style="position:fixed; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9;"></iframe>
+</div>
+<!-- end of games-->
+<!-- contact-->
+<div id="contact" class="tabcontent">
+  <main><div class="centerh containerc">
+    <h1>The maintainer has not input their contact info, unfortunately.</h1>
+  </div>
+  </main>
+</div>
+<!-- end of contact-->
+<!--Bookmarklets-->
+<div id="bookmarklets" class="tabcontent">
+  <main><div class="centerh containerc">
+    <h1>TitaniumNetwork</h1>
+    <h2>Bookmarklets</h2>
+    <h4>These bookmarklets are little scripts you put in your bookmarks bar to do cool stuff!</h4>
+    <h4>Setup of these bookmarklets is simple and it can get past tools like Hapara Highlights!</h4>
+    <h4>Select a Bookmarklet below to view its code!</h4>
+    <a href="./public-txt/gdrive.txt" class="button">Google Drive Cloak</a>
+    <a href="./public-txt/gg.txt" class="button">GoGuardian Bypass</a>
+    <a href="./public-txt/portaprox.txt" class="button">PortaProxy</a>
+  </div>
+  </main>
+</div>
+<!--end of Bookmarklets-->
+
+<!-- Surf Freely-->
+<div id="selection" class="tabcontent">
+  <iframe allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" id="pxframe" src="./go.html"  style="position:fixed; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9;"></iframe>
+</div>
+<!-- end of the proxy page-->
+  </body>
+</html>
